@@ -8,8 +8,8 @@ env:
     - EB_TOOLS_DIR=/tmp/eb_tools EB_VERSION=AWS-ElasticBeanstalk-CLI-2.6.3 EB_TOOLS=$EB_TOOLS_DIR/$EB_VERSION
     - XUNIT_FILE=shippable/testresults/result.xml
     - RDS_HOSTNAME=127.0.0.1 RDS_USERNAME=shippable RDS_PASSWORD="" RDS_DB_NAME=test RDS_PORT=3306
-    - secure: RXkuFk+4jiIJm94QCOZKzoMWk3zcT6fA0KCHdM8TKbNvyaIG89CAmZp04tYQpZg6QXJjhLHchHUTkHRQG2urWPCgEoI7Cm1tZskXB1uHl1vmo6pLNK95HIVJEDKqdHyPuq6dWJOliNUnVPQtD8Sg4V+PTAfiFGfyyV78kvRFEzHIn3iEZgoJrnOHsEPXoUp8Qzcd2Ffu9CCjU4CGBYZY6ctjubhfUVEG/XAyNs3/vJixTOsW/0DNZ1z1itNfUit3cxROZHd5FA8ddqGN+zoK/7VMrMNeZm7NFeWeatxqYHepn/Pc2M4PG/LlWfXBMSz5xIY9oX9bZTkqR+FHCBubrA==
-
+    #- secure: RXkuFk+4jiIJm94QCOZKzoMWk3zcT6fA0KCHdM8TKbNvyaIG89CAmZp04tYQpZg6QXJjhLHchHUTkHRQG2urWPCgEoI7Cm1tZskXB1uHl1vmo6pLNK95HIVJEDKqdHyPuq6dWJOliNUnVPQtD8Sg4V+PTAfiFGfyyV78kvRFEzHIn3iEZgoJrnOHsEPXoUp8Qzcd2Ffu9CCjU4CGBYZY6ctjubhfUVEG/XAyNs3/vJixTOsW/0DNZ1z1itNfUit3cxROZHd5FA8ddqGN+zoK/7VMrMNeZm7NFeWeatxqYHepn/Pc2M4PG/LlWfXBMSz5xIY9oX9bZTkqR+FHCBubrA==
+    - secure: f8tiPhWB53Q9tj/495MC4raiV0DML3SYWPRtRkjgxgryk9e8FJxuHqwewJiqxAoWiMSP2RAZgSYC/d0vVO65hI/e+SqAmDv0pIYd2N9KbCJqQCHkYb3h5ZxyQdKDKOarJMsqZzhQJwBGNUftgiAe43UZFx326OlxLZ/p0YaNcnvw6hTEgSDMO0jnsyYHC5La3wWN/2yEtxmaac5Q84OABmTUhALA7QOXjQBXkHnHO0hduekE1bt0pow0hXI1Zj3zJyUaB17skU2WdzwoH4a6Via/cL5Ne+MZVgSxlBm2wKOs5id1l7Gw2GgKF8yoB+KyqeZjiJ4Z5IVUrdOZ2W6YAQ==
 before_install:
   - if [ ! -e $EB_TOOLS ]; then wget -q -O /tmp/eb.zip https://s3.amazonaws.com/elasticbeanstalk/cli/$EB_VERSION.zip && mkdir -p $EB_TOOLS_DIR && unzip /tmp/eb.zip -d $EB_TOOLS_DIR; fi
 
