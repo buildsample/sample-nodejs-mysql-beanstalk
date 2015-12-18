@@ -22,6 +22,9 @@ before_script:
   - echo 'AWSAccessKeyId=AKIAJSZ63DTL3Z7KLVEQ' >> ~/.elasticbeanstalk/aws_credential_file
   - echo 'AWSSecretKey='$AWSSecretKey >> ~/.elasticbeanstalk/aws_credential_file
 
+services:
+  - mysql
+  
 script:
   - mkdir -p .elasticbeanstalk
   - cp config .elasticbeanstalk/
